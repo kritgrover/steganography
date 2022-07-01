@@ -13,17 +13,33 @@ Source: www.techtarget.com
 ### Basic Idea
 Images can be viewed as 2-dimensional arrays. A 24-bit image offers more than 16 million colors for every pixel. If the RGB color scheme is used, then 8 bits (values 0–255) represent the Red, Green, and Blue colors. If the least significant bits of these 8-bit values change, the difference in the image will remain unnoticed. This is exactly what is used for hiding the message in this project. The program sets the **least significant bit** for the blue color of each pixel of the input image to the value of encrypted byte of the message.
 
+<p align="center">
+<img src="images/readme/24bit.png" alt="24bit pixel representation">
+</p>
+
 With the `BufferedImage` class methods, the image pixels can be accessed as a **2-dimensional array**. IO Exceptions are handled.
+
+<p align="center">
+<img src="images/readme/Coordinates.png" alt="Image Coordinates">
+</p>
 
 ### Encoding
 Steganography is about hiding information in such a way that no-one would ever guess there's a secret message hidden right before their eyes. The method we are going to use for concealing a message in an image is based on slight color changes that can’t be detected.
 
 The message data can be inserted at the positions of the least significant bits of each color value of each pixel. That makes 3 bits per pixel and a total of 3 * [image width] * [image height] bits for the whole image. That isn't used as it would be more efficient to have an algorithm that picks which bits to use. The message to hide has the String type and UTF-8 charset. As a result, the message can be in any language. Specifically, we will add three bytes with values 0, 0, 3 (or 00000000 00000000 00000011 in the binary format). When the program encounters these bytes, it will know that it has reached the end of the message.
 
+<p align="center">
+<img src="images/readme/pixels.png" alt="Storing message byte array in pixel">
+</p>
+
 ### Encrypting with Password
 We could make it even more complex: the bit selection can be based on a password so that the configuration is different every time the password is changed.
 
 Exclusive OR (XOR) is a logical operation whose output is only true when its inputs differ. XOR can also be used on data bits where `1` stands for `true` and `0` stands for `false`. Below you can find both the **XOR truth table** (on the left) with the input and output values of the XOR operation and the XOR bitwise operation (on the right).
+
+<p align="center">
+<img src="images/readme/tables.png" alt="XOR table">
+</p>
 
 XOR has an interesting mathematical feature: _A XOR B = C and C XOR B = A_. If _A_ is the message and **B** the password, then _C_ is the encrypted message. Using _B_ and _C_, we can reconstruct _A_.
 
