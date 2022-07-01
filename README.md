@@ -35,13 +35,17 @@ The message data can be inserted at the positions of the least significant bits 
 ### Encrypting with Password
 We could make it even more complex: the bit selection can be based on a password so that the configuration is different every time the password is changed.
 
-Exclusive OR (XOR) is a logical operation whose output is only true when its inputs differ. XOR can also be used on data bits where `1` stands for `true` and `0` stands for `false`. Below you can find both the **XOR truth table** (on the left) with the input and output values of the XOR operation and the XOR bitwise operation (on the right).
+Exclusive OR (XOR) is a logical operation whose output is only true when its inputs differ. XOR can also be used on data bits where `1` stands for `true` and `0` stands for `false`. Below you can find both the **XOR truth table** with the input and output values of the XOR operation and the XOR bitwise operation.
 
 <p align="center">
 <img src="images/readme/tables.png" alt="XOR table">
 </p>
 
 XOR has an interesting mathematical feature: _A XOR B = C and C XOR B = A_. If _A_ is the message and **B** the password, then _C_ is the encrypted message. Using _B_ and _C_, we can reconstruct _A_.
+
+<p align="center">
+<img src="images/readme/xor.png" alt="XOR operation">
+</p>
 
 The program reads the password string and converts it to a Bytes Array. The first message byte will be XOR encrypted using the first password byte, the second message byte will be XOR encrypted with the second password byte, and so on. If the password is shorter than the message, then after the last byte of the password, the first byte of the password should be used again.
 
