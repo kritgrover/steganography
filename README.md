@@ -56,13 +56,15 @@ When the `show` command is triggered and the filename is input, the user is prom
 
 ## Program in Action
 
+### Running program
+
 When Main.kt is run, the user sees the menu as shown in the picture below.
 
 <p align="center">
 <img src="images/readme/menu.png" alt="Menu">
 </p>
 
-User is prompted with questions like input image name, output image name, message and password for hiding. IOErrors are handled.
+User is prompted with questions like input image path, output image path, message and password for hiding. IOErrors are handled. (Relative file referencing is required for input and output file destinations)
 
 <p align="center">
 <img src="images/readme/hide.png" alt="Hiding">
@@ -83,4 +85,3 @@ User can choose to exit whenever required.
 <p align="center">
 <img src="images/readme/exit.png" alt="Exiting">
 </p>
-
