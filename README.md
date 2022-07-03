@@ -53,3 +53,34 @@ Three Bytes with values 0, 0, 3 should be added to the encrypted Bytes Array. If
 
 ### Decoding
 When the `show` command is triggered and the filename is input, the user is prompted for the password with the message `Password:`. The image should open and the encrypted Bytes Array should be reconstructed. The program stops reading it when the bytes with the values 0, 0, 3 are found. The last three bytes should be removed and the encrypted Bytes Array should be decrypted using the password. Finally, the message should be restored to the String type, and the program should print the message on a new line.
+
+## Program in Action
+
+When Main.kt is run, the user sees the menu as shown in the picture below.
+
+<p align="center">
+<img src="images/readme/menu.png" alt="Menu">
+</p>
+
+User is prompted with questions like input image name, output image name, message and password for hiding. IOErrors are handled.
+
+<p align="center">
+<img src="images/readme/hide.png" alt="Hiding">
+</p>
+
+<p align="center">
+<img src="images/readme/ioerror.png" alt="IO Error">
+</p>
+
+User is prompted with the image name and password while retrieving.
+
+<p align="center">
+<img src="images/readme/retrieve.png" alt="Retrieving image">
+</p>
+
+User can choose to exit whenever required.
+
+<p align="center">
+<img src="images/readme/exit.png" alt="Exiting">
+</p>
+
