@@ -88,7 +88,7 @@ User can choose to exit whenever required.
 
 ### Sample Images
 
-These are the test images used in the program mentioned above. The one on the left is the input image (unencrypted), and the one on the right is the output image with an encrypted message as shown in the section above.
+These are the test images used in the program mentioned above. The first one is the input image (unencrypted), and the one after is the output image with an encrypted message as shown in the section above.
 
 <p align="center">
 <img src="images/sample/rorshach.jpg" width=48% alt="Rorschach Unencrypted">
