@@ -52,7 +52,7 @@ The program reads the password string and converts it to a Bytes Array. The firs
 Three Bytes with values 0, 0, 3 should be added to the encrypted Bytes Array. If the image size is adequate for holding the Bytes array, the result is hidden in the image.
 
 ### Decoding
-When the `show` command is triggered and the filename is input, the user is prompted for the password with the message `Password:`. The image should open and the encrypted Bytes Array should be reconstructed. The program stops reading it when the bytes with the values 0, 0, 3 are found. The last three bytes should be removed and the encrypted Bytes Array should be decrypted using the password. Finally, the message should be restored to the String type, and the program should print the message on a new line.
+When the `retrieve` command is triggered and the filename is input, the user is prompted for the password with the message `Password:`. The image should open and the encrypted Bytes Array should be reconstructed. The program stops reading it when the bytes with the values 0, 0, 3 are found. The last three bytes should be removed and the encrypted Bytes Array should be decrypted using the password. Finally, the message should be restored to the String type, and the program should print the message on a new line.
 
 ## Program in Action
 
