@@ -1,6 +1,17 @@
 # Steganography
 An application made using Kotlin that takes an image file as an input, encodes it with a message within the pixels along with a password which is used for decoding.
 
+## Table of Contents:
+- [What is Steganography?](#what-is-steganography)
+- [Implementation](#implementation)
+  - [Basic Idea](#basic-idea)
+  - [Encoding](#encoding)
+  - [Encrypting with Password](#encrypting-with-password)
+  - [Decoding](#decoding)
+- [Program in Action](#program-in-action)
+  - [Running Program](#running-program)
+  - [Sample Images](#sample-images)
+
 ## What is Steganography?
 Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted at its destination. The use of steganography can be combined with encryption as an extra step for hiding or protecting data. 
 
